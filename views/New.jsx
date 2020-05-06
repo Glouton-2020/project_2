@@ -14,8 +14,9 @@ class New extends React.Component {
                   Forecasted Sales: <input type="text" name="futureSales" /><br/>
                   Notes: <input type="text" name="notes" /><br/>
                   <input type="submit" name="" value="Add Client"/>
-               </form>
-          </div>);
+              </form>
+          </div>
+          );
     }
   }
   
