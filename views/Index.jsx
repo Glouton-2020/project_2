@@ -1,46 +1,51 @@
 const React = require('react');
+const Default = require('./Default');
 
 class Index extends React.Component {
     render() {
         const { clients } = this.props;
+
         return (
-            <div className="container">
+            <Default>
+            <header className="container-fluid">
                 <h1>Client Directory</h1>
-                <nav>
-                    <a href="/crm/new">Add Client Info</a>
+            </header>
+                <nav className="container">
+                    <a className="btn btn-outline-primary" href="/crm/new">Add a New Client</a>
                 </nav>
-                <ul>
+                
+                <main className="container">
+                    <div className ="row">
                     {
                         clients.map((client, i) => {
-                            // console.log(log._id)
+                            // console.log(client)
+                        
                             return (
-                                <li>
-                                    The <a href={`/crm/${client._id}`}>{client.companyName}</a> is 
-                                    <a href={`/crm/${client._id}`}>{client.industry}</a> 
-                                    {client.clientName}{client.description}
-                                    {client.contactClient ? `The client been contacted` : `The client has not be contacted`}
-                                    {client.futureSales}{client.notes}
-                                    <form action={`/crm/${client._id}?_method=DELETE`} method="POST">
-                                        <input type="submit" value="delete"/>
-                                        </form>
-                                        <a href={`/crm/${client._id}/edit`}>Edit</a>
-                                        <form action={`/crm/${client._id}/edit`}>
-                                        <input type="submit" value="edit"/>
-                                    </form>
+                                <div className = "col-md-2" key={i}>
+                                    <a className ="btn btn-outline-info btn-sm" href={`/crm/${client._id}/edit`}>EDIT</a>
 
-                                        
-                                    {/* <div> Industry A </div>
-                                    <div> Industry B </div>
-                                    <div> Industry C </div>
-                                    <div> Contact Number: </div>
-                                    <div> Reached Out: </div>
-                                    <div> Project Sales: </div> */}
-                                </li>
+                                <div className="item">
+                                <form className="form-group form-delete" action={`/crm/${client._id}?_method=DELETE`} method="POST">
+                                        <input className="btn-delete" type="submit" value="delete"/>
+                                        </form>
+                                    
+                                    <div className="info-container">
+                                        <a href={`/crm/${client._id}`}>
+                                            <h4>Company: {client.companyName}</h4>
+                                        </a>
+                                    <p>Industry: {client.industry}</p>
+                                    <p>Description: {client.description}</p>
+                                    <p>{client.contactClient ? `The client has been contacted` : `The client has not been contacted`} </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                             )
                         })
                     }
-                </ul>
-            </div>
+                </div>
+            </main>
+        </Default>
         )
     }
 }
