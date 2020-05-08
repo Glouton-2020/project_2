@@ -6,7 +6,7 @@ class Index extends React.Component {
         const { clients } = this.props;
 
         return (
-            <Default>
+            <Default title="Client Relationship DataBase" route="index">
             <header className="container-fluid">
                 <h1>Client Directory</h1>
             </header>
@@ -14,9 +14,13 @@ class Index extends React.Component {
                     <a className="btn btn-outline-primary" href="/crm/new">Add a New Client</a>
                 </nav>
                 
-                <main className="container">
-                    <div className ="row">
-                    {
+                <main className="container-fluid">
+                <div class="row justify-content-md-center">
+                                <div class="row col-lg-3">
+                                Get Back to Work
+                                <img className="img-fluid" src="https://media.giphy.com/media/nOBv4FaG7o1Hy/giphy.gif" alt="Stock Image"/>
+                                </div>
+                                {
                         clients.map((client, i) => {
                             // console.log(client)
                         
@@ -24,17 +28,20 @@ class Index extends React.Component {
                                 <div className = "col-md-2" key={i}>
                                     <a className ="btn btn-outline-info btn-sm" href={`/crm/${client._id}/edit`}>EDIT</a>
 
-                                <div className="item">
-                                <form className="form-group form-delete" action={`/crm/${client._id}?_method=DELETE`} method="POST">
+                                <div className="btn btn-outline-success">
+                                <form className="form-group form-delete" class="btn btn-secondary btn-lg" action={`/crm/${client._id}?_method=DELETE`} method="POST">
                                         <input className="btn-delete" type="submit" value="delete"/>
                                         </form>
                                     
                                     <div className="info-container">
                                         <a href={`/crm/${client._id}`}>
-                                            <h4>Company: {client.companyName}</h4>
+                                            <h4>{client.companyName}</h4>
                                         </a>
                                     <p>Industry: {client.industry}</p>
                                     <p>Description: {client.description}</p>
+                                    <hr class="my-4"></hr>
+                                    <p>Full Name: {client.name}</p>
+                                    <p>E-mail Address: {client.email}</p>
                                     <p>{client.contactClient ? `The client has been contacted` : `The client has not been contacted`} </p>
                                     </div>
                                     
