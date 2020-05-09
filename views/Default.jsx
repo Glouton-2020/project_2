@@ -17,8 +17,9 @@ class Default extends React.Component {
                 <body>
                     {this.props.children}
                     <footer>
-                        <div className="container">
-                            <p>Built by Benjamin Glouton 2020</p>
+                        <div className="container-fluid">
+                            <p>Built by Benjamin Glouton in 2020</p>
+                            <a id='linkedin' href="https://www.linkedin.com/in/benjamin-glouton/" target='_blank'>Connect with me on LinkedIn</a>
                         </div>
                     </footer>
                 </body>

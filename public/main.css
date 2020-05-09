@@ -1,3 +1,7 @@
+:root {
+    --bright-pink: #e74c83;
+    --reg-width: 16px;
+    }
 
 header{
     background: url(/img/mickey.jpg);
@@ -20,6 +24,23 @@ h1{
     text-align: center;
     padding: 2rem;
     font-family: 'Monofett', cursive;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+    legend {
+    padding: 0px 10px;
+    font-weight: 500;
+}
+
+    label {
+    font-weight: 250;
+    color: var(--bright-pink);
+    display: block;
 }
 
 footer{
