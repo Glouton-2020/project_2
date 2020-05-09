@@ -4,6 +4,7 @@
 ======================================================
 ## Concept: 
 =======================================================
+
 For this project, I created a full CRUD CRM application using the technologies outlined below. I thought of creating the app as a useful tool for my sales team to use in their client outreach. Although the application is far from being considered a viable customer relationship management system, it is fun to use and able to keep users on track with their customer relations. 
 
 ## Technologies Used:
