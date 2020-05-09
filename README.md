@@ -1,5 +1,5 @@
 
-# Simple Customer Relationship Management Website
+# Customer Relationship Management Website
 
 ======================================================
 ## Concept: 
