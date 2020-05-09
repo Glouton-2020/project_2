@@ -58,7 +58,7 @@ class Index extends React.Component {
                                     <td>{client.industry}</td>
                                     <td>{client.name}</td>
                                     <td>{client.email}</td>
-                                    <td>{client.contactClient ? `The client has been contacted` : `The client has not been contacted`}</td>
+                                    <td>{client.contactClient ? `The client has been contacted` : `Contact the client!`}</td>
                                     <td>
                                         <a className="table__btn-edit btn btn-outline-info" href={`/crm/${client._id}/edit`}>
                                             <i class="fas fa-edit"></i></a>
