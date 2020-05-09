@@ -83,6 +83,39 @@ app.post('/crm', (req, res) => {
     });
 });
 
+
+// Seed Route
+// app.get('/seed', (req, res) => {
+//     Client.create([
+//         {
+//             companyName: 'Tom Ford',
+//             industry: 'Luxury Fashion',
+//             description: 'Luxury fashion house with some top quality scents',
+//             name: 'Donald King',
+//             email: 'dking@tomford.com',
+//             contactClient: true,
+//         },
+//         {
+//             companyName: 'The Real Real',
+//             industry: 'Retail',
+//             description: 'The RealReal is the leader in authenticated luxury consignment. All items are authenticated through a rigorous process overseen by experts.',
+//             name: 'Elliot Seed',
+//             email: 'ellise@trr.com',
+//             contactClient: false,
+//         },
+//         {
+//             companyName: 'Apple',
+//             industry: 'Technology',
+//             description: 'Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment.',
+//             name: 'Tim Apple',
+//             email: 'tapple@apple.com',
+//             contactClient: true,
+//         }
+//     ], (err, client) => {
+//         res.redirect('/crm');
+//     })
+// });
+
 // Delete
 app.delete('/crm/:id', (req, res) => {
     // Delete document from collection

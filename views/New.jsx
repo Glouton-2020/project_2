@@ -5,44 +5,47 @@ class New extends React.Component {
     render() {
         return (
             <Default>
-                 {/* <!-- ============= CONTAINER ============== --> */}
+                <head>
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"crossorigin="anonymous"/>
+                </head>
+
             <div className="container">
-                <h1>Add Company Information</h1>
-
-                <ul class="nav justify-content-end">
-                    <a className="btn btn-primary" href="/crm">Back</a>
-                </ul>
-
+            <hr class="my-4"></hr>
+            <h2> <small class="text-muted">Add</small> </h2>
+            <h2 class="display-3">Company Information</h2>
+            <nav>
+                    <a button type="button" className = "nav-link active" href="/crm"> BACK</a>
+            </nav>
                 <div className="row">
                     <div className="col-md-5 my-auto">
-                    <img className="img-fluid" src="https://media.giphy.com/media/xTiTnvMImfPiGyNamI/giphy.gif" alt="Stock Image"/>
+                    <img className="img-fluid" src="https://media.giphy.com/media/3ohhwlgaHwZ9zQ9HZS/giphy.gif" alt="Stock HourGlass Image"/>
                 </div>
 
             <div className="col-md-7 my-auto">
-                
                 
                 <form className="form-group" action="/crm" method="POST">
                     <fieldset class="account-info">
                     <legend>COMPANY INFORMATION</legend>
 
-                    <label for ="companyName">Company Name:</label>
+                    <i class="fas fa-building"><label for ="companyName">Company Name:</label></i> 
                         <input className="form-control" type="text" name="companyName" placeholder="Enter Company Name"/><br/>
-                    <label for ="industry">Industry:</label>
+                    <i class="fas fa-archive"></i><label for ="industry">Industry:</label>
                         <input className="form-control" type="text" name="industry" placeholder="Enter the Industry"/><br/>
-                    <label for ="description">Description: </label>
+                    <i class="fas fa-history"></i><label for ="description">History: </label>
                         <textarea className="form-control" type="textarea" name="description" placeholder="Enter Company Information"/><br/>
 
                     <legend>CLIENT INFORMATION</legend>
 
-                    <label for ="name">Full Name:</label>
+                    <i className="fas fa-address-book"></i><label for ="name">Full Name:</label>
                         <input className="form-control" type="text" name="name" placeholder="Enter Full Name"/><br/>
-                    <label for ="email">Email Address:</label>
+                    <i class="fas fa-envelope"></i><label for ="email">Email Address:</label>
                         <input className="form-control" type="email" name="email" placeholder="Enter Valid Email Address"/><br/>
-                    <label for="contactClient"> Has the client been contacted:</label>
+                    <i class="fas fa-address-card"></i><label for="contactClient"> Has the client been contacted:</label>
                         <input className="form-control" type="checkbox" name="contactClient" /><br/>
                     </fieldset>
 
-                    <input className="btn btn-primary" type="submit" name="" value="Add Client"/>
+                    <input className="btn btn-primary btn-lg active" type="submit" name="" value="Add Client"/>
                 </form>
 
                     </div>

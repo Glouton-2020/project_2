@@ -1,5 +1,6 @@
 const React = require ('react');
 
+
 class Default extends React.Component {
     render() {
         return (
@@ -10,6 +11,8 @@ class Default extends React.Component {
                     <link rel="stylesheet" href="/main.css"/>
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous"></link>
                     <title>Benjamin Glouton - Project 2: Client Relationship Management </title>
+                    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css"></link>
+                    <link href="https://fonts.googleapis.com/css?family=Monofett&display=swap" rel="stylesheet"></link>
                 </head>
                 <body>
                     {this.props.children}

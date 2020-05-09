@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 // Create Schema
 const clientSchema = new Schema({
 
-    email: String,
     companyName: { type: String, required: true },
-    name: String,
     industry: { type: String, required: true },
     description: { type: String, required: true },
+    name: String,
+    email: String,
     contactClient: { type: Boolean },
 });
 
