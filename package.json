@@ -1,6 +1,9 @@
 {
-  "name": "CRM_2",
+  "name": "CRM_Project_2",
   "version": "1.0.0",
+  "engines": {
+    "node": "13.8.0"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
