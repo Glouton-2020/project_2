@@ -7,12 +7,11 @@ class Index extends React.Component {
 
         return (
             <Default title="Client Relations Manager" route="index">
-            <header className="container-fluid">
+                <header className="container-fluid">
                 <h1 class="display-1">Customer Relationship Management</h1>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
-            crossorigin="anonymous"
-            />
+            crossorigin="anonymous"/>
             </header>
                 <nav className="clearfix">
                     <a className="btn btn-outline-primary" href="/crm/new">Add a New Client</a>
@@ -60,10 +59,10 @@ class Index extends React.Component {
                                     <td>{client.email}</td>
                                     <td>{client.contactClient ? `The client has been contacted` : `Contact the client!`}</td>
                                     <td>
-                                        <a className="table__btn-edit btn btn-outline-info" href={`/crm/${client._id}/edit`}>
-                                            <i class="fas fa-edit"></i></a>
-                                        </td>
-                                        <td>
+                                            <a className="table__btn-edit btn btn-outline-info" href={`/crm/${client._id}/edit`}>
+                                                    <i class="fas fa-edit"></i></a>
+                                    </td>
+                                    <td>
                                             <form className="table__form-delete" action={`/crm/${client._id}?_method=DELETE`} method="POST">
                                                 <button className="btn btn-delete btn-outline-danger" type="submit">
                                                     <i className="fas fa-user-slash"></i>
@@ -73,7 +72,7 @@ class Index extends React.Component {
                                             </tr>
                                             );
                                         })}
-                                    </tr>
+                                </tr>
                             </table>
                     </div>
             </main>
