@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
 // Mongoose Setup 
-mongoose.connect('mongodb://localhost:27017/project-2', {useNewUrlParser:true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/crm', {useNewUrlParser:true, useUnifiedTopology: true});
 mongoose.connection.once('open', () => {
     console.log('Connected to mongoDB');
 });
