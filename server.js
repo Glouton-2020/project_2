@@ -6,6 +6,8 @@ const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/crm'
 
+
+
 // Middleware
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
@@ -14,7 +16,7 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
 // Mongoose Setup 
-mongoose.connect('mongodb://localhost:27017/crm', {useNewUrlParser:true, useUnifiedTopology: true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser:true, useUnifiedTopology: true});
 mongoose.connection.once('open', () => {
     console.log('Connected to mongoDB');
 });
@@ -24,6 +26,6 @@ const crmController = require('./controllers/controllers.js');
 app.use('/crm', crmController);
 
 // Listen Route 
-app.listen(3000, () => {
-    console.log('listening on: ' + 3000);
+app.listen(PORT, () => {
+    console.log('listening on: ' + PORT);
 });
