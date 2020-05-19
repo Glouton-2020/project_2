@@ -38,6 +38,6 @@ I built out my routes one by one building down to the delete route. My wireframe
 ## App Demo 
 Take a look at my project on Heroku: (links need to be fixed)
 
-https://crud-crm-project-2.herokuapp.com/
+https://crud-crm-project-2.herokuapp.com/crm
 
 
